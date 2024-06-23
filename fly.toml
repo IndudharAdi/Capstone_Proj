@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for mini-project-indu-ragv3 on 2024-06-23T00:21:16-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'mini-project-indu-ragv3'
+primary_region = 'ewr'
+
+[build]
+
+[http_service]
+  internal_port = 5000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
