@@ -28,7 +28,7 @@ def generate_answer(prompt, api_key):
     return response.choices[0].text.strip()
 
 app = Flask(__name__)
-API_KEY = os.getenv('sk-proj-YXc9ZzdAotPDje2RPkq0T3BlbkFJylyg7kdFH7fVvn1spTda')
+API_KEY = os.getenv('OPEN_API')
 AUTH_TOKEN = os.getenv('f00be7bc2e26e0cf00558721a839290e')
 
 @app.route('/rag', methods=['POST'])
