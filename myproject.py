@@ -36,7 +36,7 @@ app_fast = FastAPI()
 
 # OpenAI API key
 load_dotenv()
-openai.api_key = os.getenv("sk-proj-YXc9ZzdAotPDje2RPkq0T3BlbkFJylyg7kdFH7fVvn1spTda")
+openai.api_key = os.getenv("OPEN AI KEY")
 client = OpenAI(api_key=openai.api_key)
 
 class ChatMessage(BaseModel):
